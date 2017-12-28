@@ -1,0 +1,5 @@
+package less03;
+
+public interface Seek {
+
+}

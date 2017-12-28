@@ -1,0 +1,14 @@
+package less01.autowire;
+
+public class B {
+	private A c;
+
+	public A getC() {
+		return c;
+	}
+
+	public void setC(A c) {
+		this.c= c;
+	}
+	
+}

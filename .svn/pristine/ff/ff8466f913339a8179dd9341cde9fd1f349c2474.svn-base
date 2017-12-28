@@ -1,0 +1,10 @@
+package less03;
+
+public class AfHouseOwer implements HouseOwer {
+
+	public void seekMyHouse() {
+		// TODO Auto-generated method stub
+
+	}
+
+}

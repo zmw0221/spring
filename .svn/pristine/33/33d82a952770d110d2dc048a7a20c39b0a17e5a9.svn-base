@@ -1,0 +1,15 @@
+package less03.aop;
+
+import org.springframework.stereotype.Component;
+
+@Component
+public class Mymessage {
+
+	public void beforeseek(){
+		System.out.println("´òÉ¨ÎÀÉú");
+	}
+	
+	public void afterseek(){
+		System.out.println("ÊÕÇ®");
+	}
+}

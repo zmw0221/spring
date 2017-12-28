@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:context="http://www.springframework.org/schema/context"
+    xsi:schemaLocation="http://www.springframework.org/schema/beans
+        http://www.springframework.org/schema/beans/spring-beans-4.2.xsd
+        http://www.springframework.org/schema/context
+        http://www.springframework.org/schema/context/spring-context-4.2.xsd">
+     
+     <!-- 使用bean来定义读取资源文件
+    	优先读取bean定义的
+    	context命名空间 优先读取系统资源
+     --><!--  
+     	<context:exclude-filter type="assignable" expression="classpath:/less02/mvc/Mydao"></context:exclude-filter>
+      	type="assignable" 排除指定的类
+		type ="annotion" 表示排除某些带有指定注解的类
+      	-->
+      	<context:component-scan base-package="less02.mvc"></context:component-scan>
+        <context:property-placeholder location="classpath:/less02/mvc/jdbc.properties"/>
+        
+	<!--数据源只是为了获取链接 
+	${username}是个关键字 默认是系统的用户名 -->
+	
+
+</beans>

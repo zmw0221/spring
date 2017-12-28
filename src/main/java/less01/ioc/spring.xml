@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://www.springframework.org/schema/beans
+        http://www.springframework.org/schema/beans/spring-beans-4.2.xsd">
+
+    <bean id="b1" class="less01.ioc.A">
+       <property name="name" value="李四"></property>
+    </bean>
+
+    <bean id="b" class="less01.ioc.B">
+       <property name="a" ref="b1"></property>
+    </bean>
+<!--  属性注入
+   <bean id="c" class="less01.ioc.C">
+   	<constructor-arg name="id" value="1"></constructor-arg>
+   	<constructor-arg name="name" value="王五"></constructor-arg>
+   	<constructor-arg name="b" ref="b"></constructor-arg>
+   </bean>
+   -->
+   <!-- 构造器注入 -->
+ <bean id="c" class="less01.ioc.C">
+   	<constructor-arg type="java.lang.String" value="1"></constructor-arg>
+   	<constructor-arg type="java.lang.String" value="王五"></constructor-arg>
+   	<constructor-arg type="less01.ioc.B" ref="b"></constructor-arg>
+   </bean>
+</beans>

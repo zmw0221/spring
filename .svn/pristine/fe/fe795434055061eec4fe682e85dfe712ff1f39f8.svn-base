@@ -1,0 +1,14 @@
+package less02.jdbc;
+
+import javax.sql.DataSource;
+
+import org.springframework.context.ApplicationContext;
+import org.springframework.context.support.ClassPathXmlApplicationContext;
+
+public class TestCotainer {
+	public static void main(String[] args) {
+		ApplicationContext context= new ClassPathXmlApplicationContext("classpath:/less02/jdbc/spring.xml");
+		DataSource dataSource = (DataSource)context.getBean("dataSource");
+		
+	}
+}

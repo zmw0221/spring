@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://www.springframework.org/schema/beans
+        http://www.springframework.org/schema/beans/spring-beans-4.2.xsd">
+
+    <bean id="b1" class="less01.autowire.A">
+       <property name="name" value="李四"></property>
+    </bean>
+
+    <bean id="b" class="less01.autowire.B">
+       <property name="a" ref="b1"></property>
+    </bean>
+	<!-- 自动装配 将当前实列中所有的对象属性 全部进行填充
+			byType对象属性是所在的类在容器中只能拥有一个实列	
+	 -->
+	<bean id="a" class="less01.autowire.B" autowire="byType"></bean>
+</beans>

@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://www.springframework.org/schema/beans
+        http://www.springframework.org/schema/beans/spring-beans-4.2.xsd">
+
+    <bean id="a" class="less01.ioc.A">
+       <property name="name" value="李四"></property>
+    </bean>
+
+    <bean id="b" class="less01.ioc.B">
+       <property name="a" ref="a"></property>
+    </bean>
+
+   <bean id="c" class="less01.ioc.C">
+   	<constructor-arg index="0" value="1"></constructor-arg>
+   	<constructor-arg index="1" value="王五"></constructor-arg>
+   	<constructor-arg index="2" ref="b"></constructor-arg>
+   </bean>
+
+</beans>
